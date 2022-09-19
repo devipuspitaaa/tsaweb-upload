@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Article;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 
@@ -20,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::resource('articles', ArticleController::class);
+
+Route::get('/articles/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');

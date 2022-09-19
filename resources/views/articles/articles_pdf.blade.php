@@ -15,14 +15,9 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left mt-2">
-                    <h2>Artikel</h2>
+                    <h2>Laporan Artikel</h2>
                 </div>
-                <div class="float-right my-2">
-                    <a class="btn btn-success" href="{{ route('articles.create') }}"> Tambah Artikel</a>
-                </div>
-                <div class="float-right my-2">
-                    <a class="btn btn-success" href="{{ route('cetak_pdf') }}"> Cetak PDF</a>
-                </div>
+                
             </div>
         </div>
         <div class="card-body">
@@ -42,7 +37,7 @@
             @foreach ($articles as $article)
             <tr>
 
-                <td><a href="{{ route('articles.edit',['article'=>$article->id]) }} ">{{ $article->title}}</a></td>
+                <td>{{ $article->title}}</td>
                 <td>{{ $article->content }}</td>
                 <td>
                     <img width="100px" height="100px" src="{{asset('storage/'.$article->featured_image)}}">

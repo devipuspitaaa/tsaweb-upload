@@ -15,7 +15,7 @@
     </script>
 
     <div class="container">
-        <h2>Edit Produk</h2>
+        <h2>Edit Artikel</h2>
         <form method="POST" action="/articles/{{$article->id}}" enctype="multipart/form-data">
             @method('PUT')
             {{ csrf_field() }}
